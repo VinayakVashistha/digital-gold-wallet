@@ -1,6 +1,5 @@
 package com.example.demo.model;
 
-
 import jakarta.persistence.*;
 
 @Entity
@@ -11,13 +10,19 @@ public class Addresses {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer addressId;
 
+    @Column(nullable = false)
     private String street;
+
+    @Column(nullable = false)
     private String city;
+
+    @Column(nullable = false)
     private String state;
 
     @Column(name = "postal_code")
-    private String postalCode;
+    private String postalCode;          // nullable — no change
 
+    @Column(nullable = false)
     private String country;
 
     public Addresses() {}

@@ -22,6 +22,7 @@ public class VendorBranches {
 
     private BigDecimal quantity;
 
+    @Column(name = "created_at", insertable = false, updatable = false)
     private LocalDateTime createdAt;
 
     public VendorBranches() {}

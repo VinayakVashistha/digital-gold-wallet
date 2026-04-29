@@ -18,7 +18,7 @@ public class Users {
 
     private BigDecimal balance;
 
-    @Column(name = "created_at")
+    @Column(name = "created_at", insertable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @ManyToOne

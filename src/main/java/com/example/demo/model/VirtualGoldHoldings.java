@@ -22,7 +22,7 @@ public class VirtualGoldHoldings {
 
     private BigDecimal quantity;
 
-    @Column(name = "created_at")
+    @Column(name = "created_at", insertable = false, updatable = false)
     private LocalDateTime createdAt;
 
     public VirtualGoldHoldings() {}

@@ -26,9 +26,9 @@ public class PhysicalGoldTransactions {
     @JoinColumn(name = "delivery_address_id")
     private Addresses deliveryAddress;
 
-    @Column(name = "created_at")
+    @Column(name = "created_at", insertable = false, updatable = false)
     private LocalDateTime createdAt;
-
+    
     public PhysicalGoldTransactions() {}
 
     // Getters & Setters

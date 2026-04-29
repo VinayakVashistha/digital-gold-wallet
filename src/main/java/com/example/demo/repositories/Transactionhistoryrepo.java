@@ -8,7 +8,7 @@ import com.example.demo.model.TransactionHistory;
 
 public interface Transactionhistoryrepo extends JpaRepository<TransactionHistory,Integer> {
 	
-		List<TransactionHistory> findByUserId(Integer userId);
+	List<TransactionHistory> findByUserUserId(Integer userId);
 		List<TransactionHistory> findByTransactionStatus(String status);
 		List<TransactionHistory> findByTransactionType(String type);
 	

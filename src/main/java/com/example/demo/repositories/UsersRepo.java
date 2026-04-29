@@ -11,6 +11,22 @@ import com.example.demo.model.Users;
 
 @Repository
 @RepositoryRestResource(path = "users")
-public interface UsersRepoGarima extends JpaRepository<Users, Integer> {
+public interface UsersRepo extends JpaRepository<Users, Integer> {
+	
     List<Users> findByName(String name);
+     
+    List<Users> findByAddress_City(String city);
+    
+    List<Users> findByAddress_State(String state);
 }
+
+
+
+
+
+
+
+
+
+
+

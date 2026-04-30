@@ -1,6 +1,8 @@
-package com.example.demo.repositories;
+package com.example.demo.apiendpoint;
 
 import com.example.demo.model.VendorBranches;
+import com.example.demo.repositories.VendorBranchesRepository;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;

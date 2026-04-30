@@ -26,7 +26,7 @@ public class AddressRepositoryTest {
         String unique = String.valueOf(System.currentTimeMillis());
 
         Addresses address = new Addresses();
-        address.setStreet("Street_" + unique);
+        address.setStreet("Street__" + unique);
         address.setCity("Pune_" + unique);
         address.setState("Maharashtra");
         address.setPostalCode("411001_" + unique);

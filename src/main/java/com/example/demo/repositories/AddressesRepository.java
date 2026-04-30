@@ -34,7 +34,7 @@ public interface AddressesRepository extends JpaRepository<Addresses, Integer> {
 
     // Exposed as: GET /api/v1/address/search/findByPostalCode?postalCode=400001
     @RestResource(path = "findByPostalCode", rel = "findByPostalCode")
-    Optional<Addresses> findByPostalCode(@Param("postalCode") String postalCode);
+     List<Addresses> findByPostalCode(@Param("postalCode") String postalCode);
 
     // Exposed as: GET /api/v1/address/search/findByStreetContaining?street=Main
     @RestResource(path = "findByStreetContaining", rel = "findByStreetContaining")

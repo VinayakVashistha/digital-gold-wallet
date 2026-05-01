@@ -12,16 +12,15 @@ import com.example.demo.model.TransactionHistory;
 @RepositoryRestResource(path = "transaction_history")
 public interface TransactionHistoryRepo extends JpaRepository<TransactionHistory, Integer> {
 
-    // GET /api/v1/transaction_history/search/findByUserId?userId=1
     @RestResource(path = "findByUserId", rel = "findByUserId")
     List<TransactionHistory> findByUserUserId(@Param("userId") Integer userId);
 
-    // GET /api/v1/transaction_history/search/findByTransactionStatus?status=Success
+    @RestResource(path = "findByBranchId", rel = "findByBranchId")
+    List<TransactionHistory> findByBranch_BranchId(@Param("branchId") Integer branchId);
+
     @RestResource(path = "findByTransactionStatus", rel = "findByTransactionStatus")
     List<TransactionHistory> findByTransactionStatus(@Param("status") String transactionStatus);
 
-    // GET /api/v1/transaction_history/search/findByTransactionType?type=Buy
     @RestResource(path = "findByTransactionType", rel = "findByTransactionType")
     List<TransactionHistory> findByTransactionType(@Param("type") String transactionType);
-
 }
